@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="gele-maven-pub" />
+      <option name="name" value="gele-maven-pub" />
+      <option name="url" value="https://sfera.inno.local/app/repo-ci-maven/api/repository/gele-maven-pub/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="otpe-maven-pub" />
+      <option name="name" value="otpe" />
+      <option name="url" value="https://sfera.inno.local/app/repo-ci-maven/api/repository/otpe-maven-pub/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="gele-maven" />
+      <option name="name" value="gele-maven" />
+      <option name="url" value="https://sfera.inno.local/app/repo-ci-maven/api/repository/gele-maven/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://sfera.inno.local/app/repo-ci-maven/api/repository/ppln_pptm-maven-pub/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="epaa-maven-pub" />
+      <option name="name" value="epaa-maven-pub" />
+      <option name="url" value="https://sfera.inno.local/app/repo-ci-maven/api/repository/epaa-maven-pub/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="gele-maven-snapshot" />
+      <option name="name" value="gele-maven-snapshot" />
+      <option name="url" value="https://sfera.inno.local/app/repo-ci-maven/api/repository/gele-maven-snapshot/" />
+    </remote-repository>
+  </component>
+</project>
