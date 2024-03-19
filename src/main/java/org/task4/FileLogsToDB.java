@@ -14,7 +14,7 @@ import java.util.function.Supplier;
 
 
 @Component
-@PropertySource("classpath:myApp.properties")
+@PropertySource("classpath:application.properties")
 public class FileLogsToDB {
 
     @Autowired Supplier<List<Path>>     logData;

@@ -1,6 +1,5 @@
 package org.task4.fileshandler;
 
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -25,9 +24,7 @@ public class FilesReader implements Supplier<List<Path>> {
         try {
             Files.walk(Paths.get(path))
                     .filter(Files::isRegularFile)
-                    .forEach(file -> {
-                        files.add(file);
-                    });
+                    .forEach(files::add);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

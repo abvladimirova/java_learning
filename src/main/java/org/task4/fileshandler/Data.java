@@ -1,24 +1,13 @@
 package org.task4.fileshandler;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
-
 import java.sql.Date;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-@EqualsAndHashCode
+@Getter
 
-public class Data {
-    @Getter
-    private String loginUser;
-    @Getter
-    private String FIO;
-    @Getter
-    private Date loginDate;
-    @Getter
-    private String app;
-
+public record Data(String loginUser, String FIO, Date loginDate, String app) {
     public Data(String loginUser, String FIO, Date loginDate, String app) {
         this.loginUser = loginUser;
         this.FIO = capitalize(FIO);
@@ -26,26 +15,23 @@ public class Data {
         this.app = checkApp(app);
     }
 
-    private static String checkApp(String word)
-    {
+    private static String checkApp(String word) {
         if (word.equals("web") || word.equals("mobile")) {
             return word;
         }
-        return "other:"+word;
+        return "other:" + word;
     }
 
 
-    private static String capitalizeWord(String word)
-    {
-        if (word.isEmpty()) {
+    private static String capitalizeWord(String word) {
+        if (word == null || word.isEmpty()) {
             return word;
         }
         return word.substring(0, 1).toUpperCase() + word.substring(1);
     }
 
-    private static String capitalize(String str)
-    {
-        if (str == null || str.length() == 0) {
+    private static String capitalize(String str) {
+        if (str == null || str.isEmpty()) {
             return str;
         }
 
@@ -54,7 +40,6 @@ public class Data {
                 .collect(Collectors.joining(" "));
 
     }
-
 
     @Override
     public String toString() {

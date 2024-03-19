@@ -1,9 +1,7 @@
 package org.task4.fileshandler;
 
-
 import java.io.IOException;
 import java.sql.Date;
-
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.springframework.core.convert.converter.Converter;
@@ -14,7 +12,7 @@ public class StringToData implements Converter<String, Data> {
     @Override
     public Data convert(String source) {
         try (
-            CSVParser parser = CSVParser.parse(source, CSVFormat.DEFAULT);
+            CSVParser parser = CSVParser.parse(source, CSVFormat.DEFAULT)
         ) {
             var record = parser.stream().toList().get(0);
             this.data = new Data(record.get(0), record.get(1), Date.valueOf(record.get(2)), record.get(3));

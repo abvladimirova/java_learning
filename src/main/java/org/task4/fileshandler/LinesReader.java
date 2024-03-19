@@ -30,7 +30,6 @@ public class LinesReader implements Supplier<List<String>> {
         for (Path f:files) {
             try (Stream<String> lines = Files.lines(Path.of(f.toString()), Charset.forName(fileCharset));
             ) {
-               // Stream<String> lines = Files.lines(Path.of(f.toString()), Charset.forName(fileCharset));
                 linesData.addAll(lines.toList());
             } catch (IOException e) {
                 throw new RuntimeException(e);

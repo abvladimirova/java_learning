@@ -20,16 +20,16 @@ public class DBWriter implements MyConsumer<List<Data>> {
     @Bean @DependsOn("convertDataList")
     public boolean accept(@Autowired List<Data> data) {
         data.forEach(d -> {
-            var users = usersRepo.findByUserName(d.getLoginUser());
+            var users = usersRepo.findByUserName(d.loginUser());
             User user;
-            if (users.size()>0) {
-                user = new User(users.get(0).getId(),d.getLoginUser(),d.getFIO());
+            if (!users.isEmpty()) {
+                user = new User(users.get(0).getId(),d.loginUser(),d.FIO());
             }
             else {
-                user = new User(0,d.getLoginUser(),d.getFIO());
+                user = new User(0,d.loginUser(),d.FIO());
             }
             usersRepo.save(user);
-            LoginsDairy loginsRec = new LoginsDairy(0,d.getLoginDate(),user,d.getApp());
+            LoginsDairy loginsRec = new LoginsDairy(0,d.loginDate(),user,d.app());
             loginsRepo.save(loginsRec);
         });
         return true;
