@@ -28,9 +28,10 @@ public class LinesReader implements Supplier<List<String>> {
     public List<String> get() {
         var linesData = new ArrayList<String>();
         for (Path f:files) {
-            try {
-                Stream<String> lines = Files.lines(Path.of(f.toString()), Charset.forName(fileCharset));
-                linesData.addAll(lines.collect(Collectors.toList()));
+            try (Stream<String> lines = Files.lines(Path.of(f.toString()), Charset.forName(fileCharset));
+            ) {
+               // Stream<String> lines = Files.lines(Path.of(f.toString()), Charset.forName(fileCharset));
+                linesData.addAll(lines.toList());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

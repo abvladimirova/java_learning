@@ -15,7 +15,7 @@ public class Writer /*implements Consumer<List<Data>>*/ {
     public boolean accept(@Autowired List<Data> data) {
         // TODO здесь должна быть запись в БД
         System.out.println("DataList=");
-        data.stream().forEach(d -> System.out.println(d.toString()));
+        data.forEach(d -> System.out.println(d.toString()));
         return true;
     }
 
