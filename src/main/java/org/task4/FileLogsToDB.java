@@ -3,10 +3,11 @@ package org.task4;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
+import org.task4.repository.LoginsRepo;
+import org.task4.repository.UsersRepo;
 
 import java.nio.file.Path;
 import java.util.List;
-import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 
@@ -17,8 +18,11 @@ public class FileLogsToDB {
     @Autowired Supplier<List<Path>>     logData;
     @Autowired Supplier<List<String>>   linesReader;
     @Autowired Supplier<List<Data>>     logObjects;
-    @Autowired Writer                   writer;
+    @Autowired MyConsumer<List<Data>>   writer;
+    @Autowired UsersRepo                usersRepo;
+    @Autowired LoginsRepo               loginsRepo;
 
     public void make() {
+
     }
 }

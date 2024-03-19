@@ -1,16 +1,22 @@
 package org.task4;
 
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 
 import java.sql.Date;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @EqualsAndHashCode
+
 public class Data {
+    @Getter
     private String loginUser;
+    @Getter
     private String FIO;
+    @Getter
     private Date loginDate;
+    @Getter
     private String app;
 
     public Data(String loginUser, String FIO, Date loginDate, String app) {
