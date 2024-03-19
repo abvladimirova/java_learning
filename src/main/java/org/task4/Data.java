@@ -1,9 +1,12 @@
 package org.task4;
 
+import lombok.EqualsAndHashCode;
+
 import java.sql.Date;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+@EqualsAndHashCode
 public class Data {
     private String loginUser;
     private String FIO;
@@ -45,6 +48,7 @@ public class Data {
                 .collect(Collectors.joining(" "));
 
     }
+
 
     @Override
     public String toString() {

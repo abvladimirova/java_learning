@@ -11,7 +11,7 @@
     </repositories>
 
     <groupId>org.example</groupId>
-    <artifactId>CftToJava2</artifactId>
+    <artifactId>java_leaning</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
