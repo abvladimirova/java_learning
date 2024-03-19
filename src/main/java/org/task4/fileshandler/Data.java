@@ -1,4 +1,4 @@
-package org.task4;
+package org.task4.fileshandler;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

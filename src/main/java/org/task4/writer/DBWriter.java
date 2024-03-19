@@ -1,4 +1,4 @@
-package org.task4;
+package org.task4.writer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -6,6 +6,7 @@ import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 import org.task4.entity.LoginsDairy;
 import org.task4.entity.User;
+import org.task4.fileshandler.Data;
 import org.task4.repository.LoginsRepo;
 import org.task4.repository.UsersRepo;
 

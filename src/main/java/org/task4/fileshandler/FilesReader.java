@@ -1,4 +1,4 @@
-package org.task4;
+package org.task4.fileshandler;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

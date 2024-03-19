@@ -3,8 +3,10 @@ package org.task4;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
+import org.task4.fileshandler.Data;
 import org.task4.repository.LoginsRepo;
 import org.task4.repository.UsersRepo;
+import org.task4.writer.MyConsumer;
 
 import java.nio.file.Path;
 import java.util.List;
