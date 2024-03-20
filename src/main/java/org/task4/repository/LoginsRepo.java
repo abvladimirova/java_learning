@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 import org.task4.entity.LoginsDairy;
 
 @Repository
-@Component
 public interface LoginsRepo extends CrudRepository<LoginsDairy, Integer> {
 
 }

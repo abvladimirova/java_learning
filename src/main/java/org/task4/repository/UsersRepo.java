@@ -7,7 +7,6 @@ import org.task4.entity.User;
 import java.util.List;
 
 @Repository
-@Component
 public interface UsersRepo extends CrudRepository<User, Integer> {
     List<User> findByUserName(String userName);
 }

@@ -5,8 +5,6 @@ import java.sql.Date;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-@Getter
-
 public record Data(String loginUser, String FIO, Date loginDate, String app) {
     public Data(String loginUser, String FIO, Date loginDate, String app) {
         this.loginUser = loginUser;
